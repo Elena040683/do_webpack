@@ -1,3 +1,8 @@
+import './styles/main.scss';
+import imgCat from './images/cat.png';
+import imgDog from './images/labrador-640.jpg';
+import {sum} from './helpers/sum.js';
+
 
 
 // Create a class property without a constructor
@@ -17,9 +22,17 @@ heading.textContent = "Interesting!";
 const app = document.querySelector("#root");
 app.append(heading, p);
 
-// const img = document.createElement("img");
-// img.src = example;
-// app.append(img);
+const cat = document.createElement("img");
+cat.src = imgCat;
+app.append(cat);
+
+const dog = document.createElement("img");
+dog.src = imgDog;
+app.append(dog);
+
+console.log(sum(2, 3));
+
+
 
 // const svgImg = document.createElement("img");
 // svgImg.src = imgSvg;

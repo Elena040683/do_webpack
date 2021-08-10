@@ -17,7 +17,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'My App',
       template: path.resolve(__dirname, './src/template.html'),
-      filename: 'index.html'
+      filename: 'index.html',
+      inject: 'body',
     })
   ],
 
@@ -27,7 +28,21 @@ module.exports = {
         test: /\.js$/,
         exclude: '/node_modules/',
         use: ['babel-loader'],
+      },
+      {
+        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(woff(2)?|eot|tif|otf|svg|)$/,
+        type: 'asset/inline',
+      },
+      {
+        test: /\.(sass|css)$/,
+        use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"],
       }
+    
+
     ],
   },
 
