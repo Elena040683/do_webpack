@@ -1,7 +1,8 @@
-import './styles/main.scss';
 import imgCat from './images/cat.png';
 import imgDog from './images/labrador-640.jpg';
-import {sum} from './helpers/sum.js';
+import { sum } from './helpers/sum.js';
+import './styles/main.scss';
+
 
 
 
