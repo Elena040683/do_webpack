@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack serve",
     "build": "webpack"
   },
   "keywords": [],
@@ -26,6 +27,7 @@
     "postcss-preset-env": "^6.7.0",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.2.1",
-    "webpack": "^5.49.0"
+    "webpack": "^5.49.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }

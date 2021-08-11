@@ -19,7 +19,8 @@ module.exports = {
       template: path.resolve(__dirname, './src/template.html'),
       filename: 'index.html',
       inject: 'body',
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin(),
   ],
 
   module: {
@@ -41,10 +42,18 @@ module.exports = {
         test: /\.(scss|css)$/,
         use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       },
-    
 
     ],
   },
 
+  mode: "development",
+    devServer: {
+      historyApiFallback: true,
+      contentBase: path.resolve(__dirname, "./dist"),
+      open: true,
+      compress: true,
+      hot: true,
+      port: 8080,
+    },
 };
 
